@@ -1,0 +1,17 @@
+zone: cynthia.se.
+ttl: 30
+vars:
+    serial: 5
+---
+# name record_type [data...] extra_data
+
+@ SOA blahaj.ns.cynthia.re. admin.cynthia.re. %(serial)% 5 5 3600 %(ttl)%
+
+@ NS blahaj.ns.cynthia.re.
+@ NS kramig.ns.cynthia.is.
+
+@ ALIAS proxy.infra.cynthia.re.
+testy 5 TXT "cats"
+
+@ MX 10 mxtest.p1e.net.
+testy ALIAS proxy.infra.cynthia.re. {"comment": "uwu"}

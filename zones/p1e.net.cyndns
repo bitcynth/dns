@@ -1,0 +1,27 @@
+zone: p1e.net.
+ttl: 30
+vars:
+    serial: 2
+---
+# name record_type [data...] extra_data
+
+@ SOA blahaj.ns.cynthia.re. admin.cynthia.re. %(serial)% 5 5 3600 %(ttl)%
+
+@ NS blahaj.ns.cynthia.re.
+@ NS kramig.ns.cynthia.is.
+
+@ ALIAS proxy.infra.cynthia.re.
+www CNAME p1e.net.
+
+@ MX 1 mxtest.p1e.net.
+
+cats ALIAS proxy.infra.cynthia.re.
+cats2 ALIAS proxy.infra.cynthia.re.
+mxtest A 79.110.169.160
+mxtest AAAA 2a0d:1a45:babe:cafe::5
+
+@ TXT "google-site-verification=QQU4g5Juj5JbRHjxMoNU938us26PlyDsNjWgfSlhepk"
+
+# SPF
+@ TXT "v=spf1 ip4:79.110.169.160 ~all"
+@ SPF "v=spf1 ip4:79.110.169.160 ~all"
