@@ -1,17 +1,17 @@
 zone: isbgpgay.com.
 ttl: 30
-vars:
-    serial: 2
 ---
 # name record_type [data...] extra_data
 
-@ SOA blahaj.ns.cynthia.re. admin.cynthia.re. %(serial)% 5 5 3600 %(ttl)%
+@ SOA blahaj.ns.cynthia.re. admin.cynthia.re. %(SERIAL_INC)% 5 5 3600 %(ttl)%
 
 @ NS blahaj.ns.cynthia.re.
 @ NS kramig.ns.cynthia.is.
 
 @ ALIAS proxy.infra.cynthia.re.
 www CNAME isbgpgay.com.
+
+@ MX 10 mxtest.p1e.net.
 
 # SPF
 @ TXT "v=spf1 ip4:79.110.169.160 ~all"

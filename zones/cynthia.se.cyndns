@@ -1,11 +1,9 @@
 zone: cynthia.se.
 ttl: 30
-vars:
-    serial: 5
 ---
 # name record_type [data...] extra_data
 
-@ SOA blahaj.ns.cynthia.re. admin.cynthia.re. %(serial)% 5 5 3600 %(ttl)%
+@ SOA blahaj.ns.cynthia.re. admin.cynthia.re. %(SERIAL_INC)% 5 5 3600 %(ttl)%
 
 @ NS blahaj.ns.cynthia.re.
 @ NS kramig.ns.cynthia.is.
